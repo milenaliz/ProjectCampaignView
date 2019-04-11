@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register Campaign Form</title>
+</head>
+<body>
+
+<form th:action="@{/campaigns}" method="POST" th:object="${campaign}">
+    <table>
+        <tr>
+            <td>Tytuł</td>
+            <td><input type="text" th:field="${campaign.title}" /></td>
+        </tr>
+        <tr>
+            <td>Opis</td>
+            <td><input type="text" th:field="${campaign.description}" /></td>
+        </tr>
+        <tr>
+            <td>Marka</td>
+            <td><input type="text" th:field="${campaign.brand}" /></td>
+        </tr>
+        <tr>
+            <td>Poczatek</td>
+            <td><input type="date" th:field="${campaign.start}" /></td>
+        </tr>
+        <tr>
+            <td>Koniec</td>
+            <td><input type="date" th:field="${campaign.end}" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="register" /></td>
+        </tr>
+        </div>
+    </table>
+</form>
+
+<form th:action="@{/logout}" method="POST">
+    <input type="submit" value="Logout"/>
+</form>
+
+</body>
+</html>

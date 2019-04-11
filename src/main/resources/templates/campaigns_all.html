@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<table style="border:1px solid black">
+    <tr>
+        <td>title</td>
+        <td>description</td>
+        <td>brand</td>
+        <td>start</td>
+        <td>end</td>
+        <td>customerId</td>
+    </tr>
+    <tr th:each="campaign : ${campaigns}">
+        <td th:text="${campaign.title}"></td>
+        <td th:text="${campaign.description}"></td>
+        <td th:text="${campaign.brand}"></td>
+        <td th:text="${campaign.start}"></td>
+        <td th:text="${campaign.end}"></td>
+        <td th:text="${campaign.customerId}"></td>
+    </tr>
+</table>
+</body>
+</html>
